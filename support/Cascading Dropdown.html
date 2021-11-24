@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+var majorObject = {
+  "EE": ["EE251/250", "EE23131"], //add other majors and course like "major": ["course1", "course2"],
+  "IE": ["IE321", "IE332"]
+}
+window.onload = function() {
+  var majorSel = document.getElementById("major");
+  var courseSel = document.getElementById("course");
+  var chapterSel = document.getElementById("chapter");
+  for (var x in majorObject) {
+    majorSel.options[majorSel.options.length] = new Option(x, x);
+  }
+  majorSel.onchange = function() {
+    //empty Chapters- and courses- dropdowns
+    
+    courseSel.length = 1;
+    
+    
+    var z = majorObject[majorSel.value];
+    console.log(z);
+    for (var i = 0; i < z.length; i++) {
+      courseSel.options[courseSel.options.length] = new Option(z[i], z[i]);
+    } 
+  }  
+}
+</script>
+</head>   
+<body>
+
+<h1>Cascading Dropdown Example</h1>
+
+<form name="form1" id="form1" action="/action_page.php">              <! –– apply your css ––>
+Major: <select name="major" id="major">
+    <option value="" selected="selected">Select major</option>
+  </select>
+  <br><br>
+Course: <select name="course" id="course">
+    <option value="" selected="selected">Please select major first</option>
+  </select>
+  <br><br>
+
+  <input type="submit" value="Submit">  
+</form>
+
+</body>
+</html>
