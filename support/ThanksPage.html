@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - DailyUI #001 - Sign Up</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    @import 'https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:400,700';
+
+    /*--------------------
+  General Style
+  ---------------------*/
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      height: 100%;
+      font-family: 'Quicksand', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: rgba(30, 29, 31, 1);
+      background: -moz-linear-gradient(-45deg, rgba(30, 29, 31, 1) 0%, rgba(223, 64, 90, 1) 100%);
+      background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(30, 29, 31, 1)), color-stop(100%, rgba(223, 64, 90, 1)));
+      background: -webkit-linear-gradient(-45deg, rgba(30, 29, 31, 1) 0%, rgba(223, 64, 90, 1) 100%);
+      background: -o-linear-gradient(-45deg, rgba(30, 29, 31, 1) 0%, rgba(223, 64, 90, 1) 100%);
+      background: -ms-linear-gradient(-45deg, rgba(30, 29, 31, 1) 0%, rgba(223, 64, 90, 1) 100%);
+      background: linear-gradient(135deg, rgba(30, 29, 31, 1) 0%, rgba(223, 64, 90, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e1d1f', endColorstr='#df405a', GradientType=1);
+    }
+
+    /*--------------------
+  Text
+  ---------------------*/
+
+    .text {
+      color: #032942;
+      font-size: 1.1em;
+      font-weight: 700;
+
+
+    }
+
+    h2 {
+      color: #747474;
+      text-align: center;
+    }
+
+    h3 {
+      color: #032942;
+      text-align: right;
+    }
+
+    /*--------------------
+  Login Box
+  ---------------------*/
+
+    .box {
+      width: 330px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .box-form {
+      width: 320px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .box-login {
+      position: relative;
+      top: -4px;
+      width: 320px;
+      background: #fdfdfd;
+      text-align: center;
+      overflow: hidden;
+      z-index: 2;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      -webkit-box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+      -moz-box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+      box-shadow: 15px 30px 30px rgba(0, 0, 0, 0.32);
+    }
+    a {
+      color: #df405a;
+      text-decoration: underline;
+    }
+    .fieldset-body {
+      display: table;
+    }
+    .fieldset-body p {
+      width: 100%;
+      display: inline-table;
+      padding: 5px 20px;
+      margin-bottom: 2px;
+    }
+    input[type=submit] {
+      width: 100%;
+      height: 48px;
+      padding: 0px 20px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+      background-color: #87314e;
+      border: 1px #87314e solid;
+      opacity: 1;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {
+      background-color: #df405a;
+      border: 1px #df405a solid;
+    }
+
+    input[type=submit]:focus {
+      outline: none;
+    }
+    .icon-credits {
+      width: 100%;
+      position: absolute;
+      bottom: 4px;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.1);
+      text-align: center;
+      z-index: -1;
+    }
+    .icon-credits a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.2);
+    }
+    .entered{
+      color: #747474;
+    }
+  </style>
+</head>
+<body>
+  <div class='box'>
+    <div class='box-form'>
+      <div class='box-login'>
+        <div class='fieldset-body' id='login_form'>
+          <p class='field'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20%" height="20%" fill="#D83E58" class="bi bi-check-circle"
+              viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+            </svg>
+          <h2>Thank you</h2>
+          <p class="text"> For submitting a<span class="entered">"quiz"</span> in <span class="entered">"EE"</span></p>
+          <p class="text" style="margin-top: 0px;"><a target="_blank" href="#">Click Here</a> to see your file</p>
+          </p>
+          <input type='submit' onclick="window.open('https://sites.google.com/site/allisonethelind')" value='Go back' title='HomePage' /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='icon-credits'>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a
+       title="Ibrahim Khayat, Hasan Bahassan, Mohammed-Almadani, Mohammed Al-Harari"> </a>KAU IE321 T3 CA © 2022.  <a
+       title="All Rights Reserved.">All Rights Reserved.</a>  
+  </div>
+  <!-- partial -->
+</body>
+</html>
